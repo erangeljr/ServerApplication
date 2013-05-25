@@ -1,30 +1,31 @@
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class Server {
+public class Server implements Runnable {
 	
-	static Socket socket = null;
-	static ServerSocket serverSocket = null; 
-
-	public static void main(String argv[]){
-
-		try{
-
-			serverSocket = new ServerSocket(9999);
-		}
-		catch(IOException e){
-			e.printStackTrace();
-			return;
-		}
-			              
-
-//		while(true){
-//			socket = serverSocket.accept();
-//			(new Thread (ServerAgent(socket))).start();
-//
-//		}	
+	//Output Stream to Client
+	private ObjectOutputStream output;
+	//Input Stream from Client
+	private ObjectInputStream input;
+	//ServerSocket
+	private ServerSocket server;
+	//Connection to Client
+	private Socket connection;
+	private int counter = 1;
+	
+	//Defautl Constructor
+	public Server(Socket socket){
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
