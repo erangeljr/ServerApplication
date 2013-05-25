@@ -4,7 +4,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class ServerAgent {
+public class ServerAgent implements Runnable {
 	
 	//Output Stream to Client
 	private ObjectOutputStream output;
@@ -15,5 +15,11 @@ public class ServerAgent {
 	//Connection to Client
 	private Socket connection;
 	private int counter = 1;
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
